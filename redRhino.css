@@ -1,0 +1,253 @@
+body
+{
+  margin: 0;
+}
+.book {
+    display: flex;
+    margin-left: 10%;
+  }
+  #cover {
+    width: 500px;
+    height: 800px;
+  }
+  .flip-book {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    perspective: 1500px;
+  }
+  .flip {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: .5s;
+    color: #000;
+  }
+  .front {
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 0 13px;
+  }
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background-color: white;
+  }
+  .next-btn {
+    position: absolute;
+    bottom: 13px;
+    right: 13px;
+    cursor: pointer;
+    color: #000;
+  }
+  .back-btn {
+    position: relative;
+    bottom: 10px;
+    right: 13px;
+    cursor: pointer;
+    color: black;
+  }
+  #p1 {
+    z-index: 3;
+  }
+  #p2 {
+    z-index: 2;
+  }
+  #p3 {
+    z-index: 1;
+  }
+  #c1:checked ~ .flip-book #p1 {
+    transform: rotateY(-180deg);
+    z-index: 1;
+  }
+  #c2:checked ~ .flip-book #p2 {
+    transform: rotateY(-180deg);
+    z-index: 2;
+  }
+  #c3:checked ~ .flip-book #p3 {
+    transform: rotateY(-180deg);
+    z-index: 3;
+  }
+  #c1:checked ~ .flip-book #backc1
+  {
+    color: #fff;  
+  }
+  #c2:checked ~ .flip-book #backc2
+  {
+    color: #fff;  
+  }
+button {
+  cursor: pointer;
+}
+/* minmax(400px, 1fr) */
+
+#portfolio {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4,minmax(200px, 1fr) );
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 3px;
+}
+.project {
+  position: relative;
+  background: #f2dad7;
+  overflow: hidden;
+}
+.project img {
+    position: absolute;
+    opacity: 0.9;
+  }
+  /* p {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: 1em 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 3;
+  } */
+  /* .grid__title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    bottom: 0;
+    font-weight: 100;
+    font-size: 0.8em;
+    z-index: 3;
+    text-transform: uppercase;
+    color: #474545;
+    letter-spacing: 2px;
+  } */
+
+
+ /* project hover overlay */
+.project:hover .grid__overlay {
+  transform: translateY(0%);
+}
+
+.grid__overlay {
+  background: rgba(darken(#f2dad7, 10%), 0.9);
+  height: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  transform: translateY(101%);
+  transition: all 0.3s ease-in-out;
+}
+.grid__overlay button {
+    background: none;
+    outline: none;
+    font-weight: 100;
+    letter-spacing: 2px;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+}
+.grid__overlay button :hover {
+     transition: all 0.3s ease-in-out;
+      background: white;
+      color: #d1a39e;
+      transform: scale(1.05);
+    }
+  
+
+
+/* project popup overlay */
+
+.overlay {
+  position: fixed;
+  background: rgba(#474545, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 3;
+}
+.overlay.open {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.overlay__inner {
+  background: white;
+  width: 700px;
+  padding: 20px;
+  position: relative;
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  background: none;
+  outline: 0;
+  color: #474545;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+  .close :hover {
+    color: #d1a39e;
+  }
+
+
+.project__image {
+  width: 100%;
+}
+.reservation
+{
+  height: 60px;
+        width: 250px;
+        border-radius: 50px;
+        background-image: linear-gradient(to right,
+                rgb(255, 195, 110),
+                rgb(255, 146, 91));
+        font-size: 22px;
+        border: none;
+        cursor: pointer;
+          position: relative;
+          top: 50%;
+          margin-bottom: 2%;
+          transform: translateY(-20%);
+          transform: translateX(210%);
+}
+.bio
+{
+  margin-left: 3%;
+  margin-bottom: 5%;
+}
+.titular
+{
+  text-align: center;
+}
+.book #c1, .book #c2, .book #c3
+{
+  visibility: hidden;
+}

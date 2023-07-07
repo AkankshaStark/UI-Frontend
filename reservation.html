@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+            Food Funday - Reservation Form
+        </title>
+        <meta name="description" content="food,online delivery,restaurant,booking">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Cemre Tellioğlu Tunçay">
+        <link rel="icon" type="image/png" href="./images/logo.png"/>
+        <link rel="stylesheet" href="./header.css">
+        <link rel="stylesheet" href="./reservation.css">
+        <link rel="stylesheet" href="./footer.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="home">
+        <!--header starts-->
+        <div class="topnav" id="myTopnav">
+            <img src="./images/logo.png" style="height: 50px; width:190px;">
+            <a href="./index.html">My  Profile</a>
+            <div class="dropdown">
+              <button class="dropbtn">Our Services
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="./diningSelection.html">Dining</a>
+                <a href="./order.html">Order Online</a>
+              </div>
+            </div>
+              <div class="dropdown">
+                <button class="dropbtn">About 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="./aboutUs.html">About Us</a>
+                  <a href="./team.html">Our Team</a>
+                </div>
+              </div> 
+              <a href="./index.html" class="active">Home</a>
+              <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+            <script>
+              function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "topnav";
+                }
+              }
+              </script>
+              <div class="main_bg">
+                <div class="form">
+                    <div class="form-text">
+                        <h1><span><img src="./images/art-1.png" alt=""></span>Book Now <span><img src="./images/art-1.png" alt=""></span></h1>
+                    </div>
+                    <div class="main-form">
+                        <form method="get">
+                            <div class="reserveform">
+                                <span>Your full name ?</span>
+                                <input type="text" name="name" id="name" placeholder="Write your name here..." required>
+                            </div>
+                            <div class="reserveform">
+                                <span>Your email address ?</span>
+                                <input type="email" name="name" id="name" placeholder="Write your email here..." required> 
+                            </div>
+                            <div class="reserveform">
+                            
+                                <span>How many people ?</span>
+                                <input name="people" id="people" type="number" min="1" max="8" required>
+                            </div>
+                            <div class="reserveform">
+                                <span>What time ?</span>
+                                <input type="time" name="time" id="time" placeholder="Time" required>
+                            </div>
+                            <div class="reserveform">
+                                <span>What is the date ?</span>
+                                <input type="date" name="date" id="date" placeholder="date" required>
+                            </div>
+                            <div class="reserveform">
+                                <span>Your phone number ?</span>
+                                <input type="tel" name="number" id="number" placeholder="Write your number here..." required>
+                            </div>
+                            <div id="submit">
+                              <input type="submit" value="SUBMIT" id="submit">
+                          </div>
+                          </form>
+                        </div>
+                </div>
+            </div>
+            
+            </body>
+          
+            </html>
+            

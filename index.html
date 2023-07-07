@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+            Food Funday - Home Page
+        </title>
+        <meta name="description" content="food,online delivery,restaurant,booking">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Cemre Tellioğlu Tunçay">
+        <link rel="icon" type="image/png" href="./images/logo.png"/>
+        <link rel="stylesheet" href="./header.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./footer.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="home">
+        <!--header starts-->
+        <div class="topnav" id="myTopnav">
+            <img src="./images/logo.png" style="height: 50px; width:190px;">
+            <a href="./profilePage.html">My  Profile</a>
+            <div class="dropdown">
+              <button class="dropbtn">Our Services
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="./diningSelection.html">Dining</a>
+                <a href="./order.html">Order Online</a>
+              </div>
+            </div>
+              <div class="dropdown">
+                <button class="dropbtn">About 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="./aboutUs.html">About Us</a>
+                  <a href="./team.html">Our Team</a>
+                </div>
+              </div> 
+              <a href="./index.html">Home</a>
+              <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+            <script>
+              function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "topnav";
+                }
+              }
+              </script>  
+          <!--header ends-->
+        <div class="container">
+            <!-- <img src="./images/homepagebg1.png" style="height:450px; width:100%;"> -->
+            <div class="content">
+              <p>Where there is Food...there is Fun</p>
+            </div>
+        </div>
+            <div class = "popular">
+                    <h1>Specialities</h1>
+                    <h3><u>All time popular choices</u></h3>
+                <div class="choiceone">
+                    <div class="imageone">
+                        <img src="./images/brocolli.png">
+                    </div>
+                    <div class = "text">
+                        <div class="dishes-text">
+                            <h3><span>Soya</span><br><u>Steak Sauce</u></h3>
+                            <p class="pt-3">A standard addition to stir fry and Chinese take-out,Soya Steak sauce is a 
+                              great way to bring umami to the table. A little bit of soy sauce goes a long way in flavoring
+                              marinades, brines and all sorts of dipping sauces.Soya Steak sauce is a condiment that has 
+                              been used since about 300 A.D. The standard bottle of soy sauce you’ll usually find in the 
+                              international section of the grocery store is a Japanese "dark" soy sauce. Mirin, a sweet
+                              rice wine, is added to soy sauce to create a "light" variety which is slightly sweeter. 
+                              There are also "light" and "dark" Chinese varieties of soy sauce that can be found in 
+                              some specialty Asian markets.Most soy sauce is made with wheat in addition to soybeans, 
+                              but tamari is made with little to no wheat, and many brands offer completely gluten-free 
+                              tamari. A gluten- and soy-free soy sauce substitute is coconut aminos, which tastes 
+                              similarly to soy sauce but is made from coconut tree sap.Store unopened soy sauce in a 
+                              cool, dark place. Once opened, store soy sauce in the refrigerator. Because soy sauce
+                              (even the reduced sodium kind) contains so much salt, go easy on seasoning when you use 
+                              it and make sure to taste it as you cook to avoid a salt overload.</p>
+                            <h3 class="special-dishes-price">$35.00</h3>
+                            <button class="submit" onclick="pay()">
+                              Order Now</button>                           
+                        </div>
+                    </div>
+                </div>
+                  <div class="choicetwo">
+                    <div class="imagetwo">
+                        <img src="./images/zucchini.png">
+                    </div>
+                    <div class="texttwo">
+                        <h3><span>Corn</span><br><u>Paneer Jalfrezi</u></h3>
+                        <p>Jalfrezi is one such fusion and unique recipe. like all other indo chinese recipes, 
+                          even the jalfrezi variant comes from the bengal streets. generally, it is made with 
+                          meat or fish as its main ingredient but has undergone many adaption and vegetable or
+                          mushroom or paneer based jalfrezi for vegetarians. it is made with stir-frying
+                          vegetables which is very synonym to the Chinese cuisine. it was originated by stir 
+                          frying all the leftover with chilli, onion and sauces used in indo chinese cuisine. 
+                          However, that concept of leftover has vanished by now and are prepared with freshly 
+                          available vegetables and meat.furthermore, some more additional tips, suggestions and 
+                          variants to spice it up the vegetable jalfrezi recipe. firstly, for the mix veg jalfrezi,
+                          i would heavily recommend using different types of vegetables as much as possible. 
+                          Also, chop the vegetables randomly as you do for any indo chinese recipes. these veggies
+                          have to be stir-fried at high flame so that it gets cooked but still holds the crunchiness. 
+                          Secondly, the jalfrezi recipes are made semi-dry with no gravy base. having said that you 
+                          can have a gravy of tomato and onion sauce, but i would still recommend having the 
+                          dry variant. lastly, you can follow the same procedure and spice mix to prepare mushroom, 
+                          paneer, and also a vegan option with tofu.
+                        </p>
+                        <h3 class="special-dishes-price">$47.00</h3>
+                        <button class="submit" onclick="pay()">
+                          Order Now</button>  
+                      </div>  
+                </div>
+            </div>
+            <div class="slideshow-container">
+              <div class="mySlides">
+                <q>Never estimate the power of a good food.</q>
+              </div>
+              <div class="mySlides">
+                <q>Eating good food can be a life changing experience.</q>
+              </div>
+              <div class="mySlides">
+                <q>The best way to learn about wine is... to drink it.</q>
+              </div>
+              </div>         
+              <script>
+                var slideIndex = 0;
+                carousel();
+                function carousel()
+                {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) 
+                {
+                x[i].style.display = "none"; 
+                }
+                slideIndex++;
+                if (slideIndex > x.length) {slideIndex = 1} 
+                x[slideIndex-1].style.display = "block"; 
+                setTimeout(carousel, 2000); 
+                }
+                </script>
+            <div class="ad">
+              <video width="100%" autoplay loop muted>
+                <source src="./videos/foodreel.mp4" type="video/mp4">
+              </video>
+          </div>
+        <div class="works">
+         <div class="container1">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2> <strong class="yellow">Top Trending Restaurants</strong>This Week</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-4">
+                  <div id="white_bg" class="works_box">
+                     <h4>01</h4>
+                     <p>
+                      Crispy Studio<br>
+                      <img src="./images/foodcamp.png"><br>
+                      This is place located in Malleshwaram 10th cross. This place has 
+                      amazing dosas but the cost is high.Self service is in ground floor. 
+                      1st floor AC service hall is there. They serve both south and north
+                       Indian food. The taste, quality of the food is good.If u r tea lover
+                        then u will enjoy it more. Ambience of the restaurant is very good.
+                     </p>
+                     <button class="submittable" onclick="reserve()">
+                      Reserve a Table</button>  
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div id="white_bg" class="works_box ">
+                     <h4>02</h4>
+                     <p>
+                      Harima<br>
+                      <img src="./images/harima.png"><br>                                          
+                      Harima seems like a very formal restaurant. Their menu has varied 
+                      options. For appetizers we had the avocado maki which was good. For 
+                      the mains we had the stir fried noodles which was really nice. The 
+                      best thing i enjoy here was the matcha cheese cake. It was too 
+                      sweet and juicy. The service was very good though. 
+                    </p>
+                    <button class="submittable" onclick="reserve()">
+                      Reserve a Table</button> 
+                  </div>
+               </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="subscribe">
+        <img src="./images/connect.png">
+          <div id="container"></div>
+  <div id="template">
+    <div class="frame">
+      <div id="button_open_envelope">
+              Contact Us
+      </div>
+      <div class="message">
+          <form method="post">
+              <input type="text" name="name" id="name" placeholder="Name" required/>
+              <input type="email" name="email" id="email" placeholder="Email" required/>
+              <input type="text" name="phone" id="phone" placeholder="Phone No." required/>
+              <textarea name="message" id="messagearea" placeholder="Message"></textarea>
+              <input type="text" name="address" id="address" style="display: none;"/>
+              <input type="submit" value="send" id="send" onclick="email()">
+          </form>
+      </div>
+      <div class="bottom"></div>
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="top"></div>
+  </div>
+  </div>
+  <script src="./contactForm.js"></script>
+      </div>
+      <!--footer starts-->
+      <div class="footer">
+      <div class="footer-media">
+        <div class="connect">
+          <p>Stay Connected with us </p>
+        </div>
+          <div class="social">
+          <ul class="socials">
+            <li><a href=”#”><i class="fa fa-facebook"></i></a></li>
+            <li><a href=”#”><i class="fa fa-twitter"></i></a></li>
+            <li><a href=”#”><i class="fa fa-google-plus"></i></a></li>
+            <li><a href=”#”><i class="fa fa-youtube"></i></a></li>
+            <li><a href=”#”><i class="fa fa-linkedin-square"></i></a></li>
+         </ul>         
+        </div>
+      </div>
+        <div class="footer-content">
+          <div class="footer-image">
+          <img src="./images/logo.png">
+          <img src="./images/googlePlay.png">
+          <img src="./images/appleStore.png">
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li>
+              <h1>Quick Links</h1>
+            </li>
+            <li>
+              <a href="">Terms of use</a>
+            </li>
+            <li>
+              <a href="">Privacy policy</a>
+            </li>
+            <li>
+              <a href="">Cookies</a>
+            </li>
+            <li>
+              <a href="">Help</a>
+            </li>
+            <li>
+              <a href="">FAQs</a>
+            </li>
+            </ul>
+        </div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.1124125197744!2d77.63028851482123!3d12.900492590902596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14ba14ad93c1%3A0x72ef934747d701cd!2sSofttek!5e0!3m2!1sen!2sin!4v1679228309037!5m2!1sen!2sin" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="footercontact">
+          <ul>
+            <li>
+              <h1>Our Address</h1>
+            </li>
+          <li>
+            <p><i class="fa fa-map-marker-alt"></i>Softtek India Pvt Ltd</p>
+          </li>
+          <li>
+            <p><i class="fa fa-phone-alt"></i>8917435223</p>
+          </li>
+          <li>
+            <p><i class="fa fa-envelope"></i>akankhya.singh@softtek.com</p>
+          </li>
+          <li>
+            <p><i class="fab fa-linkedin-in"></i>@Bellyful</p>
+          </li>
+          </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <h2><b>Copyright &copy; <a href="#">Food Funday</a>, All Right Reserved.</b>
+            <b>Designed By <a href="https://htmlcodex.com">Akankhya Singh</a></b></h2>
+        </div>
+      </div>
+      <!--footer ends-->
+      </body>
+</html>

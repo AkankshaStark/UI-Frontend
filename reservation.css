@@ -1,0 +1,242 @@
+body
+{
+    margin: 0;
+    /* background: linear-gradient(45deg, #fc466b, #3F5EFB); */
+    background: linear-gradient(to right,
+    rgb(31, 202, 218),
+    rgb(122, 19, 212));
+    /* height: 100vh; */
+}
+.main_bg{
+    /* background-image: url(./images/banner-img.png); */
+    max-width: 1480px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+.form{
+    background: rgba(255,255,255,0.3);
+  padding: 3em;
+  height: 850px;
+  border-radius: 20px;
+  border-left: 1px solid rgba(255,255,255,0.3);
+  border-top: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px;
+  position: relative;
+
+}
+
+.form-text{
+    text-align: center;
+    margin: 0 0 40px 0;
+    position: relative;
+}
+.form-text h1 span img{
+    margin: 0 10px;
+
+}
+.form-text h1{
+    color: #000;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.form-text p{
+    color: #000;
+    font-size: large;
+}
+.main-form
+{
+    position: relative;
+}
+
+.main-form div{
+    margin: 10px 10px;
+    width: 300px;
+    display: inline-block;
+}
+.main-form div input {
+    width: 100%;
+    background: none;
+    border: 1px solid orange;
+    font-size: 20px;
+    color: #000;
+    outline: none;
+    padding: 3px 0 3px 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+.main-form div select{
+    width: 104%;
+    background: none;
+    border: 1px solid orange;
+    font-size: 20px;
+    color: #000;
+    outline: none;
+    padding: 3px 0 3px 10px;
+    margin-top: 10px;
+}
+.main-form div span{
+    width: 100%;
+    color: #000;
+    font-size: 25px;
+}
+
+#submit{
+    width: 100%;
+    text-align: center;
+    top: 100%;
+}
+#submit input{
+    width: 200px;
+    background-color: orange !important;
+    color: black !important;
+    transition: all .3s;
+}
+#submit input:hover{
+    width: 200px;
+    background-color: black !important;
+    color: #fff !important;
+}
+#submit input:active{
+    font-size: 19px;
+    background-color: rgb(46, 20, 5) !important;
+    color: #000 !important;
+}
+
+
+@media screen and (max-width:710px) {
+    .main-form{
+        text-align: center;
+    }
+}
+.main-form
+{
+    display: flex;
+    text-align: center;
+}
+p {
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+  input {
+    background: transparent;
+    width: 200px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+    
+    /* .form:hover {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+    } */
+    
+    /* input[type="email"],
+    &[type="password"] {
+      
+      &:focus {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+      }
+    } */
+    
+    input[type="button"] {
+      margin-top: 10px;
+      width: 150px;
+      font-size: 1rem;
+    }
+      
+      input:hover {
+        cursor: pointer;
+      }
+      
+      input:active {
+        background: rgba(255,255,255,0.2);
+      }
+    
+  
+  .form:hover {
+    margin: 4px;
+  }
+  
+
+
+::placeholder {
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.drop {
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border-left: 1px solid rgba(255,255,255,0.3);
+  border-top: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
+  position: absolute;
+  transition: all 0.2s ease;
+}
+  
+  .drop-1 {
+    height: 80px;
+    width: 80px;
+    top: 80px;
+    left: 280px;
+    z-index: -1;
+  }
+  
+  .drop-2 {
+    height: 80px;
+    width: 80px;
+    bottom: -270px;
+    right: 270px;
+    z-index: 1;
+  }
+  
+  .drop-3 {
+    height: 100px;
+    width: 100px;
+    bottom: 50px;
+    right: 260px;
+    z-index: -1;
+  }
+  
+  .drop-4 {
+    height: 120px;
+    width: 120px;
+    top: 120px;
+    right: 260px;
+    z-index: 1;
+  }
+  
+  .drop-5 {
+    height: 160px;
+    width: 160px;
+    bottom: -50px;
+    left: 230px;
+    z-index: -1;
+  }
+
+

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+            Food Funday - About Us
+        </title>
+        <meta name="description" content="food,online delivery,restaurant,booking">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Cemre Tellioğlu Tunçay">
+        <link rel="icon" type="image/png" href="./images/logo.png"/>
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="home">
+        <!--header starts-->
+        <div class="topnav" id="myTopnav">
+          <img src="./images/logo.png" style="height: 50px; width:190px;">
+          <a href="./profilePage.html">My  Profile</a>
+          <div class="dropdown">
+            <button class="dropbtn">Our Services
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="./diningSelection.html">Dining</a>
+              <a href="./order.html">Order Online</a>
+            </div>
+          </div>
+            <div class="dropdown">
+              <button class="dropbtn">About 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="./aboutUs.html">About Us</a>
+                <a href="./team.html">Our Team</a>
+              </div>
+            </div> 
+            <a href="./index.html">Home</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+          </div>
+          <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
+          <!--header ends-->
+          <div class = "gourmet">
+            <p class="one">ABOUT US</p>
+            <p class="one"> <b>GOURMET GIFTING</b> </p>
+             <p class="one"> <b>FROM THE HEART</b></p>
+          </div>
+          <div class="gifting">
+            <p><b>GOURMET GIFTING</b></p>
+            <p><b><i>It's the thought that counts</i></b></p>
+          </div>
+          <div class="content">
+            <p>Oui Oui (pronounced as"wee wee"), Oui means yes in French</p>
+            <p>Do you crave your mom's homecooked comfort food? Oui</p>
+            <p>Do you think what to have for dinner after you have bad lunch? Oui</p>
+            <p>Do you get excited when your friend buys dessert for everyone? Oui</p>
+          </div>
+          <div class="content">
+            <p>We think that food bring people together and Oui Oui loves those precious moments. Oui Oui specializes in</p>
+            <p>gourmet cookies and baked goods that are freshly made to devour. Baked with best quality ingredients with</p>
+            <p>no added preservatives. Perfect as a gift for that special moment, to share among friends as a party, or </p>
+            <p>as a token of gratitude to the people around you. Life is meaningful because of relationships and food is</p>
+            <p>a great way to spark the connections.</p>
+          </div>
+          <div class="pic">
+          </div>
+          <div class="gifting">
+            <p><b>OUR STORY</b></p>
+            <p><b><i>It's what on the inside that counts</i></b></p>
+          </div>
+          <div class="content">
+            <p>We think that food bring people together and Oui Oui loves those precious moments. Oui Oui specializes in</p>
+            <p>gourmet cookies and baked goods that are freshly made to devour. Baked with best quality ingredients with</p>
+            <p>no added preservatives. Perfect as a gift for that special moment, to share among friends as a party, or </p>
+            <p>as a token of gratitude to the people around you. Life is meaningful because of relationships and food is</p>
+            <p>a great way to spark the connections.</p>
+          </div>
+          <div class="countercontainer">
+            <div class="countercard">
+              <i class="fab fa-youtube"></i>
+              <p class="counter" name="youtube"><b>0</b></p>
+              <p class="label">Youtube Subscriber's</p>
+            </div>
+            <div class="countercard">
+              <i class="fab fa-twitter"></i>
+              <p class="counter" name="twitter"><b>0</b></p>
+              <p class="label">Twitter Followers</p>
+            </div>
+            <div class="countercard">
+              <i class="fab fa-instagram"></i>
+              <p class="counter" name="instagram"><b>0</b></p>
+              <p class="label">Instagram Followers</p>
+            </div>
+          </div>
+          <script>
+            const step = 100;
+const counters = document.querySelectorAll(".counter");
+async function getCount(name) {
+  switch (name) {
+    case "youtube":
+      // make api call
+      return 30000;
+    case "twitter":
+      return 12000;
+    case "instagram":
+      return 9000;
+  }
+}
+function loadValue(element, value) {
+  const increment = value / step;
+  function updateCounter() {
+    const c = +element.innerText;
+    if (c < value) {
+      element.innerText = `${Math.ceil(c + increment)}`;
+      setTimeout(updateCounter, 1);
+    } else {
+      element.innerText = value;
+    }
+  }
+  updateCounter();
+}
+function loadCounter() {
+  Array.from(counters || []).forEach(async (counter) => {
+    const name = counter.getAttribute("name");
+    counter.innerHTML = 0;
+    const count = await getCount(name);
+    loadValue(counter, count);
+  });
+}
+loadCounter();
+          </script>
+          <div class="testimonial_body">
+            <div class="bg"></div>
+    <div class="wrapper" id="wrapper">
+      <div class="quote-row">
+        <div class="quote-column col-active show">
+          <div class="col-inner">
+            <div class="author-meta">
+              <div class="box-image-inner image-cover">
+                <img src="https://images.unsplash.com/photo-1514222709107-a180c68d72b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQzfHxwZW9wbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+              </div>
+              <div class="author-info">
+                <div class="author-name">
+                  <p class="person-name">Tom hawck</p>
+                </div>
+                <div class="author-status">
+                  <p class="person-title"> IT Solution Company </p>
+                </div>
+              </div>
+            </div>
+            <div class="quote-wrapper">
+              <div class="quote-symbol">❛</div>
+              <div class="box-text-inner">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+              <div class="quote-symbol">❜</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote-column">
+          <div class="col-inner">
+            <div class="author-meta">
+              <div class="box-image-inner image-cover">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80">
+              </div>
+              <div class="author-info">
+                <div class="author-name">
+                  <p class="person-name">Harry john</p>
+                </div>
+                <div class="author-status">
+                  <p class="person-title"> IT Solution Company </p>
+                </div>
+              </div>
+            </div>
+            <div class="quote-wrapper">
+              <div class="quote-symbol">❛</div>
+              <div class="box-text-inner">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+              <div class="quote-symbol">❜</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote-column ">
+          <div class="col-inner">
+            <div class="author-meta">
+              <div class="box-image-inner image-cover">
+                <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80">
+              </div>
+              <div class="author-info">
+                <div class="author-name">
+                  <p class="person-name">Larry Will</p>
+                </div>
+                <div class="author-status">
+                  <p class="person-title"> IT Solution Company </p>
+                </div>
+              </div>
+            </div>
+            <div class="quote-wrapper">
+              <div class="quote-symbol">❛</div>
+              <div class="box-text-inner">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+              <div class="quote-symbol">❜</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote-column">
+          <div class="col-inner">
+            <div class="author-meta">
+              <div class="box-image-inner image-cover">
+                <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+              </div>
+              <div class="author-info">
+                <div class="author-name">
+                  <p class="person-name">Augustine</p>
+                </div>
+                <div class="author-status">
+                  <p class="person-title"> IT Solution Company </p>
+                </div>
+              </div>
+            </div>
+            <div class="quote-wrapper">
+              <div class="quote-symbol">❛</div>
+              <div class="box-text-inner">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+              <div class="quote-symbol">❜</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote-column">
+          <div class="col-inner">
+            <div class="author-meta">
+              <div class="box-image-inner image-cover">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDZ8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
+              </div>
+              <div class="author-info">
+                <div class="author-name">
+                  <p class="person-name">Jack Danny</p>
+                </div>
+                <div class="author-status">
+                  <p class="person-title"> IT Solution Company </p>
+                </div>
+              </div>
+            </div>
+            <div class="quote-wrapper">
+              <div class="quote-symbol">❛</div>
+              <div class="box-text-inner">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+              <div class="quote-symbol">❜</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote-column ">
+          <div class="col-inner">
+            <div class="author-meta">
+              <div class="box-image-inner image-cover">
+                <img src="https://images.unsplash.com/photo-1504439904031-93ded9f93e4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTl8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
+              </div>
+              <div class="author-info">
+                <div class="author-name">
+                  <p class="person-name">Luich Harry</p>
+                </div>
+                <div class="author-status">
+                  <p class="person-title"> IT Solution Company </p>
+                </div>
+              </div>
+            </div>
+            <div class="quote-wrapper">
+              <div class="quote-symbol">❛</div>
+              <div class="box-text-inner">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+              <div class="quote-symbol">❜</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote-column">
+          <div class="col-inner">
+            <div class="author-meta">
+              <div class="box-image-inner image-cover">
+                <img src="https://images.unsplash.com/photo-1474176857210-7287d38d27c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA3fHxwZW9wbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+              </div>
+              <div class="author-info">
+                <div class="author-name">
+                  <p class="person-name">Alisha Angela</p>
+                </div>
+                <div class="author-status">
+                  <p class="person-title"> IT Solution Company </p>
+                </div>
+              </div>
+            </div>
+            <div class="quote-wrapper">
+              <div class="quote-symbol">❛</div>
+              <div class="box-text-inner">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+              <div class="quote-symbol">❜</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote-column ">
+          <div class="col-inner">
+            <div class="author-meta">
+              <div class="box-image-inner image-cover">
+                <img src="https://images.unsplash.com/photo-1592621385612-4d7129426394?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE5fHxwZW9wbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+              </div>
+              <div class="author-info">
+                <div class="author-name">
+                  <p class="person-name">Lofy Sthamam</p>
+                </div>
+                <div class="author-status">
+                  <p class="person-title"> IT Solution Company </p>
+                </div>
+              </div>
+            </div>
+            <div class="quote-wrapper">
+              <div class="quote-symbol">❛</div>
+              <div class="box-text-inner">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+              <div class="quote-symbol">❜</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote-column">
+          <div class="col-inner">
+            <div class="author-meta">
+              <div class="box-image-inner image-cover">
+                <img src="https://images.unsplash.com/photo-1557053910-d9eadeed1c58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI2fHxwZW9wbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+              </div>
+              <div class="author-info">
+                <div class="author-name">
+                  <p class="person-name">Angela Baby</p>
+                </div>
+                <div class="author-status">
+                  <p class="person-title"> IT Solution Company </p>
+                </div>
+              </div>
+            </div>
+            <div class="quote-wrapper">
+              <div class="quote-symbol">❛</div>
+              <div class="box-text-inner">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+              <div class="quote-symbol">❜</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote-column ">
+          <div class="col-inner">
+            <div class="author-meta">
+              <div class="box-image-inner image-cover">
+                <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM1fHxwZW9wbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+              </div>
+              <div class="author-info">
+                <div class="author-name">
+                  <p class="person-name">Hanry Harry</p>
+                </div>
+                <div class="author-status">
+                  <p class="person-title"> IT Solution Company </p>
+                </div>
+              </div>
+            </div>
+            <div class="quote-wrapper">
+              <div class="quote-symbol">❛</div>
+              <div class="box-text-inner">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+              <div class="quote-symbol">❜</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote-column">
+          <div class="col-inner">
+            <div class="author-meta">
+              <div class="box-image-inner image-cover">
+                <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cm9ib3R8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60">
+              </div>
+              <div class="author-info">
+                <div class="author-name">
+                  <p class="person-name">Dlang Dhal</p>
+                </div>
+                <div class="author-status">
+                  <p class="person-title"> IT Solution Company </p>
+                </div>
+              </div>
+            </div>
+            <div class="quote-wrapper">
+              <div class="quote-symbol">❛</div>
+              <div class="box-text-inner">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+              <div class="quote-symbol">❜</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src="./aboutUs.js"></script> 
+          </div>   
+    <div class="newsletter">
+        <h3>SIGN UP AND JOIN OUR COMMUNITY</h3>
+        <hr>
+        <h5>Join now and receive a $20 sign up reward to spend on your next purchase.</h5>
+        <input type="text" placeholder="Enter your Email">
+        <button>Sign Up</button>
+    </div>
+     <!--footer starts-->
+     <div class="footer">
+        <div class="footer-media">
+          <div class="connect">
+            <p>Stay Connected with us </p>
+          </div>
+            <div class="social">
+            <ul class="socials">
+              <li><a href=”#”><i class="fa fa-facebook"></i></a></li>
+              <li><a href=”#”><i class="fa fa-twitter"></i></a></li>
+              <li><a href=”#”><i class="fa fa-google-plus"></i></a></li>
+              <li><a href=”#”><i class="fa fa-youtube"></i></a></li>
+              <li><a href=”#”><i class="fa fa-linkedin-square"></i></a></li>
+           </ul>         
+          </div>
+        </div>
+          <div class="footer-content">
+            <div class="footer-image">
+            <img src="./images/logo.png">
+            <img src="./images/googlePlay.png">
+            <img src="./images/appleStore.png">
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li>
+                <h1>Quick Links</h1>
+              </li>
+              <li>
+                <a href="">Terms of use</a>
+              </li>
+              <li>
+                <a href="">Privacy policy</a>
+              </li>
+              <li>
+                <a href="">Cookies</a>
+              </li>
+              <li>
+                <a href="">Help</a>
+              </li>
+              <li>
+                <a href="">FAQs</a>
+              </li>
+              </ul>
+          </div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.1124125197744!2d77.63028851482123!3d12.900492590902596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14ba14ad93c1%3A0x72ef934747d701cd!2sSofttek!5e0!3m2!1sen!2sin!4v1679228309037!5m2!1sen!2sin" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="footercontact">
+            <ul>
+              <li>
+                <h1>Our Address</h1>
+              </li>
+            <li>
+              <p><i class="fa fa-map-marker-alt"></i>Softtek India Pvt Ltd</p>
+            </li>
+            <li>
+              <p><i class="fa fa-phone-alt"></i>8917435223</p>
+            </li>
+            <li>
+              <p><i class="fa fa-envelope"></i>akankhya.singh@softtek.com</p>
+            </li>
+            <li>
+              <p><i class="fab fa-linkedin-in"></i>@Bellyful</p>
+            </li>
+            </ul>
+            </div>
+          </div>
+          <div class="copyright">
+            <h2><b>Copyright &copy; <a href="#">Food Funday</a>, All Right Reserved.</b>
+              <b>Designed By <a href="https://htmlcodex.com">Akankhya Singh</a></b></h2>
+          </div>
+        </div>
+        <!--footer ends-->
+    </body>
+</html>

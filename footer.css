@@ -1,0 +1,129 @@
+.footer{
+    position: relative;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100%;
+    color: #fff;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 6px;
+    border-radius: 50%;
+}
+.socials a i{
+    font-size: 1.1 rem;
+    width: 20px;
+    text-align: center;
+}
+.connect p
+{
+ font-size: 30px;
+ margin-left: 20px;
+ margin-top: 8px;
+}
+.footer-image img
+{
+    height: 60px;
+    width: 220px;
+    margin: 0 auto;
+    display: block;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+.footer-content
+{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-links ul,.footercontact ul
+{
+    list-style : none;
+}
+.footer-links a
+{
+    text-decoration: none;
+    color: white;
+    line-height: 1.5;
+    margin-left: 25px;
+}
+.map
+{
+    margin-top: 10px;
+}
+.footercontact 
+{
+    margin-right: 10px;
+}
+.footercontact h1
+{
+    margin-right: 40px;
+}
+.copyright a
+{
+    text-decoration: none;
+    color: white;
+}
+.copyright
+{
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: black;
+    height: 50px;
+}
+.copyright h2
+{
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.footer-media
+{
+    display: flex;
+    background-color: gray;
+    justify-content: space-between;
+    height: 50px;
+}
+@media screen and (max-width: 600px)
+{
+    .connect
+    {
+        display: block;
+        text-align: center;
+    }
+    .footer-media
+    {
+        display: inline;
+    }
+    .footer-content
+    {
+        display: block;
+    }
+  .map, .footer-links, .footercontact
+  {
+    text-align: center;
+  }
+.copyright h2
+{
+    font-size: 15px;
+}
+.footer img
+{
+    margin: auto;
+}
+.socials
+{
+    justify-content: center;
+}
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+            Food Funday - Order Online
+        </title>
+        <meta name="description" content="food,online delivery,restaurant,booking">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Cemre Tellioğlu Tunçay">
+        <link rel="icon" type="image/png" href="./images/logo.png"/>
+        <link rel="stylesheet" href="./header.css">
+        <link rel="stylesheet" href="./order.css">
+        <link rel="stylesheet" href="./footer.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="home">
+        <!--header starts-->
+        <div class="topnav" id="myTopnav">
+            <img src="./images/logo.png" style="height: 50px; width:190px;">
+            <a href="./profilePage.html">My  Profile</a>
+            <div class="dropdown">
+              <button class="dropbtn">Our Services
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="./diningSelection.html">Dining</a>
+                <a href="./order.html">Order Online</a>
+              </div>
+            </div>
+              <div class="dropdown">
+                <button class="dropbtn">About 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="./aboutUs.html">About Us</a>
+                  <a href="./team.html">Our Team</a>
+                </div>
+              </div> 
+              <a href="./index.html">Home</a>
+              <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+            <script>
+              function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "topnav";
+                }
+              }
+              </script>  
+          <!--header ends-->
+        <!--carousel started-->
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <img src="./images/carousel2.png" style="width:100%">
+          </div>
+          
+          <div class="mySlides fade">
+              <img src="./images/carosel3.png" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="./images/carousel4.png" style="width:100%">
+        </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+          
+          </div>
+          <br>
+          
+          <script>
+          let slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+          }
+          </script>
+          <!--carousel ended-->
+        
+        <div class="items">
+            <li>
+                <div class="foodpic">
+                <a href="./cart.html">
+                <img src="./images/rolls.png" alt="rolls" >
+                <figcaption>Rolls</figcaption>
+                </a>
+                </div>
+            </li>
+            <li>
+                <div class="foodpic">
+                <img src="./images/biryani.png" alt="biryani">
+                <figcaption>Biryani</figcaption>
+                </div>
+            </li>
+            <li>
+                <div class="foodpic">
+                <img src="./images/burger.png" alt="burger">
+                <figcaption>Burger</figcaption>
+                </div>
+            </li>
+            <li>
+                <div class="foodpic">
+                <img src="./images/pizza.png" alt="pizza">
+                <figcaption>Pizza</figcaption>
+                </div>
+            </li>
+            <li>
+                <div class="foodpic">
+                <img src="./images/chinese.png" alt="chinese">
+                <figcaption>Chinese</figcaption>
+                </div>
+            </li>
+            <li>
+                <div class="foodpic">
+                <img src="./images/pasta.png" alt="pasta">
+                <figcaption>Pasta</figcaption>
+                </div>
+            </li>
+            <li>
+                <div class="foodpic">
+                <img src="./images/cake.png" alt="cake">
+                <figcaption>Cake</figcaption>
+                </div>
+            </li>
+            <li>
+                <div class="foodpic">
+                <img src="./images/shakes.png" alt="shakes">
+                <figcaption>Shakes</figcaption>
+                </div>
+            </li>
+            <li>
+                <div class="foodpic">
+                <img src="./images/homefood.png" alt="homefood">
+                <figcaption>Home Food</figcaption>
+                </div>
+            </li>
+            <li>
+                <div class="foodpic">
+                <img src="./images/sandwich.png" alt="sandwich">
+                <figcaption>Sandwich</figcaption>
+                </div>
+            </li>
+            <li>
+                <div class="foodpic">
+                <img src="./images/indiansnacks.png" alt="indiansnacks">
+                <figcaption>Indian Snacks</figcaption>
+                </div>
+            </li>
+            <li>
+                <div class="foodpic">
+                <img src="./images/sweets.png" alt="sweets">
+                <figcaption>Sweets</figcaption>
+                </div>
+            </li>
+        </div>
+         <!--footer starts-->
+      <div class="footer">
+        <div class="footer-media">
+          <div class="connect">
+            <p>Stay Connected with us </p>
+          </div>
+            <div class="social">
+            <ul class="socials">
+              <li><a href=”#”><i class="fa fa-facebook"></i></a></li>
+              <li><a href=”#”><i class="fa fa-twitter"></i></a></li>
+              <li><a href=”#”><i class="fa fa-google-plus"></i></a></li>
+              <li><a href=”#”><i class="fa fa-youtube"></i></a></li>
+              <li><a href=”#”><i class="fa fa-linkedin-square"></i></a></li>
+           </ul>         
+          </div>
+        </div>
+          <div class="footer-content">
+            <div class="footer-image">
+            <img src="./images/logo.png">
+            <img src="./images/googlePlay.png">
+            <img src="./images/appleStore.png">
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li>
+                <h1>Quick Links</h1>
+              </li>
+              <li>
+                <a href="">Terms of use</a>
+              </li>
+              <li>
+                <a href="">Privacy policy</a>
+              </li>
+              <li>
+                <a href="">Cookies</a>
+              </li>
+              <li>
+                <a href="">Help</a>
+              </li>
+              <li>
+                <a href="">FAQs</a>
+              </li>
+              </ul>
+          </div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.1124125197744!2d77.63028851482123!3d12.900492590902596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14ba14ad93c1%3A0x72ef934747d701cd!2sSofttek!5e0!3m2!1sen!2sin!4v1679228309037!5m2!1sen!2sin" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="footercontact">
+            <ul>
+              <li>
+                <h1>Our Address</h1>
+              </li>
+            <li>
+              <p><i class="fa fa-map-marker-alt"></i>Softtek India Pvt Ltd</p>
+            </li>
+            <li>
+              <p><i class="fa fa-phone-alt"></i>8917435223</p>
+            </li>
+            <li>
+              <p><i class="fa fa-envelope"></i>akankhya.singh@softtek.com</p>
+            </li>
+            <li>
+              <p><i class="fab fa-linkedin-in"></i>@Bellyful</p>
+            </li>
+            </ul>
+            </div>
+          </div>
+          <div class="copyright">
+            <h2><b>Copyright &copy; <a href="#">Food Funday</a>, All Right Reserved.</b>
+              <b>Designed By <a href="https://htmlcodex.com">Akankhya Singh</a></b></h2>
+          </div>
+        </div>
+        <!--footer ends-->
+        </body>
+  </html>
